@@ -49,8 +49,10 @@ function NameInput() {
 		if (_event.code === 'Backspace') {
 			setName((name) => name.substr(0, name.length - 1))
 		} else if (acceptedCharacters.indexOf(_event.key.toLowerCase()) !== -1) {
-			setName((name) => name + _event.key)
-			console.log(name)
+			setName((name) => {
+				let newName = name + _event.key
+				return newName.slice(0, 16)
+			})
 		}
 	}
 
@@ -66,7 +68,7 @@ function NameInput() {
 			window.removeEventListener('keydown', onKeyPress)
 			clearInterval(fullBlockFlashID)
 		}
-	}, [])
+	})
 
 	return (
 		<NameInputContainer>
