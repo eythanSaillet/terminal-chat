@@ -14,47 +14,12 @@ p {
 	--green: #0bbe0b;
 }
 
-.invisible {
-	opacity: 0;
-}
-
 #root {
 	width: 100vw;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.nameInputContainer {
-	width: 300px;
-	height: 100px;
-	border: 2px solid var(--green);
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.nameInputLabel {
-	position: absolute;
-	top: -23px;
-	left: 20px;
-	background-color: var(--backGroundColor);
-	padding: 15px;
-	color: var(--green);
-}
-
-.nameInput {
-	font-size: 25px;
-}
-
-.fullBlockCharacter {
-	height: 23px;
-	width: 12px;
-	margin: 1px;
-	background-color: white;
-	transform: translateY(-3px);
 }
 
 @font-face {
