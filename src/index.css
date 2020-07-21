@@ -12,6 +12,8 @@ p {
 :root {
 	--backGroundColor: #0c1015;
 	--green: #0bbe0b;
+	--blue: #2a76f7;
+	--yellow: #ecc907;
 }
 
 #root {
