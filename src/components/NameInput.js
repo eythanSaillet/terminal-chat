@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 
 // Style
 
@@ -44,9 +45,13 @@ function NameInput() {
 	const [fullBlockIsVisible, setFullBlockIsVisible] = useState(true)
 	let fullBlockFlashID
 	const acceptedCharacters = 'abcdefghijklmnopqrstuvwxyz'
+	let history = useHistory()
 
 	function onKeyPress(_event) {
-		if (_event.code === 'Backspace') {
+		if (_event.code === 'Enter' && name.length > 0) {
+			console.log(name)
+			history.push('/loader')
+		} else if (_event.code === 'Backspace') {
 			setName((name) => name.substr(0, name.length - 1))
 		} else if (acceptedCharacters.indexOf(_event.key.toLowerCase()) !== -1) {
 			setName((name) => {
